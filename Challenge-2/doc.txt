@@ -1,0 +1,5 @@
+root:P0CP0CP0C
+ch2:ch2
+
+step1: faille system -> transformer cat en cp puis run
+step2: 3vwG3d -> puis hexa to ascii

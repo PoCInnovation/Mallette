@@ -1,0 +1,5 @@
+database create app;
+use app;
+create table users( username varchar(30) NOT NULL, password varchar(32) NOT NULL, perm enum('user', 'admin') DEFAULT 'user');
+
+insert into users (username, password, perm) values('admin', '90decd40332624c7e4b223f82ba034fa', 'admin')

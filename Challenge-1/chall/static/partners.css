@@ -1,0 +1,30 @@
+.partners {
+	display: flex;
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	flex-direction: row;
+	align-items: center;
+}
+
+.partners img {
+	transition: .5s ease;
+	border: solid darkslategray 3px;
+	margin: 50px;
+	height: 500px;
+	width: 500px;
+}
+
+.partners img:hover {
+	opacity: 0.5;
+}
+
+.partners p {
+	color: black;
+	font-weight: 400;
+	font-size: 20px;
+	padding: 10px;
+	margin: 0;
+}

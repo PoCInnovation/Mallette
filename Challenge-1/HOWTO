@@ -1,0 +1,18 @@
+# ---- Python3 ! ----
+# Be sure to have django (pip3 install) and sqlite3 on your computer
+# Use python3 manage.py runserver
+# Connect to 127.0.0.1:8000 browser
+#
+# ------------------------
+
+# ---- Docker ----
+# https://docs.docker.com/compose/django/#create-a-django-project
+# Launch docker-compose up
+# [Optional] docker-compose up --build
+# Connect to 127.0.0.1:8000 in browser
+#
+# ---- CHALLCONF -
+# DB:
+# sqlite3 db.sqlite3
+# UPDATE www_challenge SET flag="code ----" WHERE id=4;
+#

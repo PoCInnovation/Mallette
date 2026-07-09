@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "index.css" %}"/>
+	<link rel="stylesheet" href="{% static "teams.css" %}"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+		{% include "www/header.html" %}
+		{% block content %}
+		<section class="search">
+		<form id="searchbar" action="{% url 'teams-result' %}" method="get" accept-charset="utf-8">
+			<input class="searchfield" id="searchbox" name="q" type="text" placeholder="Search...">
+			<!-- <button class="searchbutton" type="submit">OK</button> -->
+		</form>
+		</section>
+		<section class="teams">
+		<ul class="rectangle-list">
+			{% for entry in list %}
+			<li>{{ entry.score }} - {{ entry.name }}</li>
+			{% endfor %}
+		</ul>
+		</section>
+		{% endblock content %}
+		{% include "www/footer.html" %}
+</body>
+</html>

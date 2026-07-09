@@ -1,0 +1,31 @@
+    <?php
+     
+        // auth.php - Authentification des admins Bases Hacking
+
+        $json = json_decode($_POST["json"], true);
+        $login = $json["username"];
+        $mdp = $json["password"];
+    if ($login != "" && $mdp != "") {
+            @mysql_connect("localhost", "root", "root") or print("Impossible de se connecter à la base de données");
+            @mysql_select_db("app") or die("Table inexistante");
+     
+            $res = mysql_query("SELECT * from users WHERE username='$login';");
+            $resultat = mysql_numrows($res);
+            mysql_close();
+            $res = mysql_fetch_assoc($res);
+            if ($resultat == 1 && $res['password'] == $mdp) {
+                if ($res['perm'] == 'admin')
+                    echo  "The flag is DuBaLiSaGeTrEsLoUrD ";
+                else
+                    echo "You don't have permissions";
+            }
+            else if ($resultat == 1) {
+                header(  "Location: ./?msg=password");
+            } else {
+                header(  "Location: ./?msg=username");
+            }
+        } else {
+            header("Location: ./");
+     }
+     
+    ?>

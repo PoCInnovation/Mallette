@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	{% load static %}
+	<link rel="stylesheet" href="{% static "index.css" %}"/>
+	<link rel="stylesheet" href="{% static "contact.css" %}"/>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+		{% include "www/header.html" %}
+		{% block content %}
+		<div class="contact">
+			<section id="hit"></section>
+			<section class="info">
+				<h3>GIVE US A SHOUT</h3>
+				<p>~ Drop us an email • Old fashioned phone calls work too ~</p>
+				<p>random@random.fr</p>
+				<p>07.77.77.77.77</p>
+			</section>
+			<svg width="100%" viewBox="0 0 100 102" preserveAspectRatio="none" class="arrow">
+				<path d="M0 0 L50 100 L100 0 Z"></path>
+			</svg>
+		</div>
+		{% endblock content %}
+		{% include "www/footer.html" %}
+</body>
+</html>

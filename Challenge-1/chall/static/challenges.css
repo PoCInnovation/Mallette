@@ -1,0 +1,52 @@
+.content {
+	margin: auto;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+#closed {
+	height: 10%;
+	margin: 50px;
+	text-align: center;
+	font-weight: 400;
+	font-size: 50px;
+	padding: 10px;
+	line-height: 10%;
+	text-rendering: optimizelegibility;
+	letter-spacing: .03em;
+}
+
+.listFlow {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	align-content: center;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+}
+
+.listFlow div {
+	height: 250px;
+	width: 250px;
+	background-color: slategray;
+	margin: 50px;
+	color: white;
+	font-weight: 400;
+	font-size: 30px;
+	padding: 10px;
+	line-height: 250px;
+	text-align: center;
+	vertical-align: middle;
+	transition: .5s ease;
+}
+
+.listFlow div:hover {
+	opacity: 0.5;
+	font-size: 0px;
+}
